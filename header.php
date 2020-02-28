@@ -24,36 +24,56 @@
 
 
 	<header class="site-header">
-		<div><?php bloginfo( 'name' ); ?></div>
-		<div><?php bloginfo( 'description' ); ?></div>
+	
+		<div class="container header-block">
+			<div class="logo">			
+				<div class="logo-img">
+					<?php the_custom_logo( $blog_id ); ?>					
+				</div>
+				<div class="logo-title">
+					<p>EmanGeoTours<br><span>Cyprus tours</span></p>
+				</div>	
+			</div>	
+			<div>
+			<nav id="site-navigation" class="main-navigation">
+					<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'voyage' ); ?></button> -->
+					<?php
+					wp_nav_menu( array(
+						'theme_location' => 'header-menu',
+						'container' => false,
+						'menu_class' => 'nav navbar-nav ',
+					) );
+					?>
+				</nav>	
+			</div>						
+		</div>	
 
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$voyage_description = get_bloginfo( 'description', 'display' );
-			if ( $voyage_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $voyage_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+		<section class="intro  container">	
+			<div class="banner-block">
+				<div>
+					<h1 class="banner-block__title"><?php bloginfo( 'name' ); ?></h1>
+				</div>			
+				<div class="banner-block__overlay">						
+					<div  class="banner-block__description">
+						<div class="social-block">
+							<ul class="social-block__item">
+								<li class="social-block__list"><a href="#" class="social-block__link"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li class="social-block__list"><a href="#" class="social-block__link"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							</ul>	
+						</div>
+						<div>
+							<h2 class="banner-block__subtitle"><?php bloginfo( 'description' ); ?></h2>
+							<p class="banner-block__text">
+									Окунись в культуру и историю калоритного Кипра, 
+									в сопровождении опытного гида.
+							</p>
+						</div>						
+					</div>											
+				</div>				
+				<div class="btn">
+					<a class="btn__link" href="#">Выбрать экскурсию</a>
+				</div>			
+				</div>											
+		</section>
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'voyage' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'header-menu',
-				'container' => false,
-				'menu_class' => 'nav navbar-nav',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+	</header>
