@@ -126,7 +126,11 @@ function voyage_scripts() {
 	wp_enqueue_style( 'voyage-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
 
 	wp_enqueue_script( 'jquery');	
-
+	wp_enqueue_style( 'voyage-slick-theme-css', get_template_directory_uri() . '\assets\css\slick-theme.css' );
+	wp_enqueue_style( 'voyage-slick-css', get_template_directory_uri() . '\assets\css\slick.css' );
+	wp_enqueue_script('voyage-jquery-migrate-js', get_template_directory_uri () . 'assets\js\jquery-migrate-1.2.1.min.js', array(),'1.0', true);
+	wp_enqueue_script('voyage-slick-slider-js', get_template_directory_uri () . '\assets\js\slick-slider.js', array(),'1.0', true);
+	wp_enqueue_script('voyage-slick-min-js', get_template_directory_uri () . '\assets\js\slick.min.js', array(),'1.0', true);
 // default 	
 
 	wp_enqueue_script('voyage-bootstrap-js', get_template_directory_uri () . '/assets/js/bootstrap.min.js', array(),'1.0', true);
@@ -138,6 +142,14 @@ function voyage_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {wp_enqueue_script( 'comment-reply' );}
 // default 	
 }
+
+function font_awesome() {
+	if (!is_admin()) {
+	  wp_register_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css');
+	  wp_enqueue_style('font-awesome');
+	}
+  }
+  add_action('wp_enqueue_scripts', 'font_awesome');
 
 add_action( 'wp_enqueue_scripts', 'voyage_scripts' );
 

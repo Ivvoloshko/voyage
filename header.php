@@ -22,7 +22,7 @@
 
 <body <?php body_class(); ?>>
 
-<section class="banner-block__overlay">
+<section class="banner-block__overlay contant-box">
 <!-- <div class="container"> -->
 	<header >	
 		<div class="header-block">
