@@ -143,9 +143,19 @@ function voyage_scripts() {
 // default 	
 }
 
+function wph_add_google_fonts() {
+    if ( !is_admin() ) {
+        wp_register_style('google-lora', 'https://fonts.googleapis.com/css?family=Lora:400,700&display=swap&subset=cyrillic', array(), null, 'all');
+        wp_register_style('google-roboto', 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,900&display=swap&subset=cyrillic', array(), null, 'all');
+        wp_enqueue_style('google-lora');
+        wp_enqueue_style('google-source-sans-pro');
+    }
+}
+add_action('wp_enqueue_scripts', 'wph_add_google_fonts');
+
 function font_awesome() {
 	if (!is_admin()) {
-	  wp_register_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css');
+	  wp_register_style('font-awesome', 'https://use.fontawesome.com/releases/v5.6.1/css/all.css');
 	  wp_enqueue_style('font-awesome');
 	}
   }

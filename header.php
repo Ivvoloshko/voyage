@@ -22,9 +22,9 @@
 
 <body <?php body_class(); ?>>
 
-<section class="banner-block__overlay contant-box">
-<!-- <div class="container"> -->
-	<header >	
+<section class="main-page">
+<div class="banner-block__overlay">
+	<header class="contant-box">	
 		<div class="header-block">
 			<div class="logo">			
 				<div class="logo-img">
@@ -50,31 +50,36 @@
 		<div class="slick-slider intro">	
 			<div class="banner-block slider-bg-1">
 				<div>
-					<h1 class="banner-block__title"><?php bloginfo( 'name' ); ?></h1>
+					<h1 class="banner-block__title line"><?php bloginfo( 'name' ); ?></h1>
 				</div>			
 				<div>						
 					<div  class="banner-block__description">
 						<div class="social-block">
 							<ul class="social-block__item">
-								<li class="social-block__list"><a href="#" class="social-block__link"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li class="social-block__list"><a href="#" class="social-block__link"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+								<li class="social-block__list"><a href="#" class="social-block__link"><i class="fab fa-viber" aria-hidden="true"></i></a></li>
+								<li class="social-block__list"><a href="#" class="social-block__link"><i class="fab fa-telegram" aria-hidden="true"></i></a></li>
+								<li class="social-block__list"><a href="#" class="social-block__link"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+								<li class="social-block__list"><a href="#" class="social-block__link"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
 							</ul>	
 						</div>
 						<div class="slider-content">
 							<h2 class="banner-block__subtitle"><?php bloginfo( 'description' ); ?></h2>
 							<p class="banner-block__text">
-									Окунись в культуру и историю калоритного Кипра, 
+									Окунись в культуру и историю колоритного Кипра, 
 									в сопровождении опытного гида.
 							</p>
 						</div>						
 					</div><!-- .banner-block__description-->
-				</div>				
-				<div class="btn">
-					<a class="btn__link" href="#">Выбрать экскурсию</a>
-				</div>			
+				</div>
+				<div class="contant-box">
+					<div class="btn">
+						<a class="btn__link" href="#">Выбрать экскурсию</a>
+					</div>
+				</div>
+							
 			</div><!--.banner-block-->
 		</div><!--.slick-slider-->											
-	<!-- </div>.container -->
+	</div>.container
 </section>
 
 	

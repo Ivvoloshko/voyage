@@ -1,3 +1,5 @@
+
+/* _________________________________________ */
 *, *:before, *:after {
 	box-sizing: border-box;
 }
@@ -8,7 +10,7 @@
 /* container 1400px*/
 
 body{
-	font-family: 'lora';
+	font-family: 'Source Sans Pro';
 	margin: 0;
 	padding: 0;		
 }
@@ -50,7 +52,7 @@ header, header a {
 	justify-content: space-between; 
 	align-items: center;
 	margin-top: 40px;
-	margin-bottom: 93px;
+	margin-bottom: 78px;
 }
 
 .navbar-nav {
@@ -90,20 +92,9 @@ header, header a {
 	margin-bottom: 10%;
 }
 
-.custom-background {
-	
-	/* position: absolute;
-	top: 0;
-	left: 0;	
-	height: 100vh; */
-	
-}
 
-.slider-bg-1 {	
-	background-image:  url('<?php echo $page_bg_image_url; ?>');
-	background-size: cover; 	
-	height: 100vh;
-}
+
+
 
 
 
@@ -127,20 +118,35 @@ header, header a {
 }
 
 .banner-block__title {	
-	font-size: 155px;	
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 155px;
+	line-height: 198px;
+	letter-spacing: 0.065em;
 	margin: 0;
 	padding: 0;
 }
 
 
 .banner-block__subtitle {
-	font-size: 24px;	
+	font-family: Lora;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 46px;
+	letter-spacing: 0.03em;
 }
 
 .banner-block__text{
 	display: block;
-	width: 630px;	
-	font-size: 26px;	
+	width: 630px;		
+	
+	font-style: normal;
+	font-weight: normal;
+	font-size: 26px;
+	line-height: 33px;
+	letter-spacing: 0.045em;	
 	margin: 0;
 	padding: 0;
 }
@@ -164,7 +170,13 @@ header, header a {
 
 .btn__link {
 	color: #fff;
-	font-size: 50px;
+	font-size: 26px;
+}
+
+.slider-bg-1 {	
+	background-image:  url('<?php echo $page_bg_image_url; ?>');
+	background-size: cover; 	
+	height: 100vh;
 }
 
 .banner-block__overlay::before{
@@ -184,14 +196,14 @@ header, header a {
 .banner-block__overlay::after{
 	content: ' ';
 	background: url('../img/bg-overlay.png') no-repeat;
-	background-size: inherit;
+	background-size: contain;
 	border-radius: 0px 17px 17px 0;
 	margin-top: 0;
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	height: 110.5%;
 	z-index: -2;	
 }
 
@@ -199,25 +211,62 @@ header, header a {
 .banner-block__description {
 	display: flex;
 	flex-direction: row;
-	align-content: center;
-	justify-content: center;	
+	
 	
 }
 
 
+
 .social-block__item {
+	margin: 0;
 	margin-right: 30px;
 	padding: 0;
+	
 }
 
 .social-block__list {
-	margin-bottom: 20px;
+	margin-bottom: 3px;
+	justify-content: flex-start;
 }
 
 .social-block__link {
-	font-size: 20px;
+	font-size: 30px;
+	color: #fff;
 }
 
 .social-block__link:hover {
 	color: #FF7900;
+}
+/* ________________________________________ */
+.line {
+	/* чтобы линии не выходили за ширину блока заголовка */
+	overflow: hidden;
+}
+
+.line::before{
+	content: '';
+
+	/* делаем линию строчно-блочной */
+	display: inline-block;
+
+	/* выравниваем вертикально по середине */
+	vertical-align: middle;
+
+	/* не позволяем ширине превысить 100% (будет добавлен бордюр) */
+	box-sizing: border-box;
+
+	/* установка ширины в 100% делает линию равной ширине тега заголовка
+	** благодаря этому линия заполнит все свободное пространство
+	** слева и справа от текста
+	*/
+	width: 100%;
+	height: 1px;
+	/* background: #6CBD83; */
+
+	/* добавляем к линии левый и правый бордюр цветом основного фона заголовка
+	** благодаря этому создается нужный отступ между линиями и текстом
+	*/
+	border: solid #FFF;
+	border-width: 0 100px;
+	margin-right: -92%;
 }
