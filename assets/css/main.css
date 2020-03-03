@@ -1,13 +1,6 @@
-
-/* _________________________________________ */
 *, *:before, *:after {
 	box-sizing: border-box;
 }
-/* container 1400px*/
-.contant-box {
-	padding: 0 calc(50% - 700px);
-}
-/* container 1400px*/
 
 body{
 	font-family: 'Source Sans Pro';
@@ -23,12 +16,60 @@ li {
 	list-style: none;
 }
 
-
-
 header, header a {
 	color: #fff;
 }
+/*==============================*/
+/*		CONTAINER 1400px		*/
+/*==============================*/
+.contant-box {
+	padding: 0 calc(50% - 700px);
+}
+/*==========*/
+/*	HEADER	*/
+/*==========*/
+.header-box {
+	display: flex;
+	justify-content: space-between; 
+	align-items: center;
+	margin-top: 40px;
+	margin-bottom: 78px;
+}
 
+.header-bg {	
+	background-image:  url('<?php echo $page_bg_image_url; ?>');
+	background-size: cover; 	
+}
+
+.header-overlay::before{
+	content: ' ';
+	background: rgba(128, 204, 218, 0.44) no-repeat;	
+	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+	border-radius: 0px 17px 17px 0;
+	position: absolute;
+	top: 39%;
+	left: 0;
+	width: 50%;
+	padding-bottom: 13%;
+	z-index: -1;
+}
+
+.header-overlay::after{
+	content: ' ';
+	background: url('../img/bg-overlay.png') no-repeat;
+	background-size: contain;
+	border-radius: 0px 17px 17px 0;
+	margin-top: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 110.5%;
+	z-index: -2;	
+}
+/*==========*/
+/*	LOGO	*/
+/*==========*/
 .logo {	
 	display: flex;	
 	align-items: center;
@@ -47,14 +88,9 @@ header, header a {
 .logo-title span {
 	font-size: 18px;
 }
-.header-block {
-	display: flex;
-	justify-content: space-between; 
-	align-items: center;
-	margin-top: 40px;
-	margin-bottom: 78px;
-}
-
+/*==========*/
+/*	MENU	*/
+/*==========*/
 .navbar-nav {
 	display: flex;
 	font-size: 22px;
@@ -78,33 +114,15 @@ header, header a {
 .menu-item:hover {
 	border-bottom: 1px solid #FF7900;
 }
-/* --------------------SLIDER------------------ */
-.slick-slider {
-	/* overflow:hidden; */
-	/* position: relative;
-	top: 0; */
-}
-
-
-.slider-content {
-	/* transform: translateY(0%); */
-	
-	margin-bottom: 10%;
-}
-
-
-
-
-
-
-
-
+/*===========*/
+/*	INTRO	 */
+/*===========*/
 .intro {	
 	display: flex;
 	flex-direction: column;
 }
 
-.banner-block {
+.intro-box {
 	display: flex;
 	flex-direction: column;	
 	padding: 0;
@@ -112,12 +130,16 @@ header, header a {
 	color: #fff;
 }
 
-.banner-block__subtitle, 
-.banner-block__title {
+.intro-content {
+	margin-bottom: 10%;
+}
+
+.intro-title,
+.intro-subtitle {
 	margin: 0;
 }
 
-.banner-block__title {	
+.intro-title {	
 	font-family: Lora;
 	font-style: normal;
 	font-weight: normal;
@@ -128,8 +150,13 @@ header, header a {
 	padding: 0;
 }
 
+.intro-description {
+	position: relative;
+	display: flex;
+	flex-direction: row;	
+}
 
-.banner-block__subtitle {
+.intro-subtitle {
 	font-family: Lora;
 	font-style: normal;
 	font-weight: normal;
@@ -138,10 +165,9 @@ header, header a {
 	letter-spacing: 0.03em;
 }
 
-.banner-block__text{
+.intro-text {
 	display: block;
-	width: 630px;		
-	
+	width: 630px;	
 	font-style: normal;
 	font-weight: normal;
 	font-size: 26px;
@@ -151,6 +177,10 @@ header, header a {
 	padding: 0;
 }
 
+
+/*===========*/
+/*	BUTTONS	 */
+/*===========*/
 .btn {
 	background-image: linear-gradient(180deg, #FA8701, #FA4C01);
 	text-align: center;
@@ -164,109 +194,171 @@ header, header a {
 	border: 1px solid #000000;
 	box-sizing: border-box;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	border-radius: 17px;
-	
-}
-
-.btn__link {
-	color: #fff;
+	border-radius: 17px;	
 	font-size: 26px;
 }
 
-.slider-bg-1 {	
-	background-image:  url('<?php echo $page_bg_image_url; ?>');
-	background-size: cover; 	
-	height: 100vh;
+.btn-link {
+	color: #fff;
+	text-align: center;
+	margin: 0;
+	padding: 0;
 }
 
-.banner-block__overlay::before{
-	content: ' ';
-	background: rgba(128, 204, 218, 0.44) no-repeat;	
-	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
-	border-radius: 0px 17px 17px 0;
-	position: absolute;
-	top: 342px;
-	left: 0;
-	width: 60%;
-	height: 200px;
-	z-index: -1;	
-
+.mouse-link {
+	display: block;	
 }
 
-.banner-block__overlay::after{
-	content: ' ';
-	background: url('../img/bg-overlay.png') no-repeat;
-	background-size: contain;
-	border-radius: 0px 17px 17px 0;
-	margin-top: 0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 110.5%;
-	z-index: -2;	
+.mouse-img {
+	max-width: 100%;
+	vertical-align: top;
 }
 
-
-.banner-block__description {
-	display: flex;
-	flex-direction: row;
-	
-	
-}
-
-
-
-.social-block__item {
+/*==============*/
+/*	SOCIAL		*/
+/*==============*/
+.social-box {
 	margin: 0;
 	margin-right: 30px;
-	padding: 0;
-	
+	padding: 0;	
 }
 
-.social-block__list {
+.social-list {
 	margin-bottom: 3px;
 	justify-content: flex-start;
 }
 
-.social-block__link {
+.social-link {
 	font-size: 30px;
 	color: #fff;
 }
 
-.social-block__link:hover {
+.social-link:hover {
 	color: #FF7900;
 }
-/* ________________________________________ */
-.line {
+/*==============*/
+/*	HEADLINE	*/
+/*==============*/
+.headline {
 	/* чтобы линии не выходили за ширину блока заголовка */
 	overflow: hidden;
 }
 
-.line::before{
+.headline::before{
 	content: '';
-
 	/* делаем линию строчно-блочной */
 	display: inline-block;
-
 	/* выравниваем вертикально по середине */
 	vertical-align: middle;
-
 	/* не позволяем ширине превысить 100% (будет добавлен бордюр) */
 	box-sizing: border-box;
-
 	/* установка ширины в 100% делает линию равной ширине тега заголовка
 	** благодаря этому линия заполнит все свободное пространство
-	** слева и справа от текста
-	*/
+	** слева и справа от текста*/
 	width: 100%;
 	height: 1px;
-	/* background: #6CBD83; */
-
 	/* добавляем к линии левый и правый бордюр цветом основного фона заголовка
-	** благодаря этому создается нужный отступ между линиями и текстом
-	*/
+	** благодаря этому создается нужный отступ между линиями и текстом*/
 	border: solid #FFF;
 	border-width: 0 100px;
 	margin-right: -92%;
+}
+/*==========*/
+/* 	FOOTER	*/
+/*==========*/
+.footer-block {
+	position: relative;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background:   url('../img/bg-footer.jpg') no-repeat;
+	background-size: cover;
+	height: 100%;	
+	z-index: 0;
+	color: #fff;
+	font-size: 24px;
+}
+
+.footer-block::before {
+	content: ' ';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 83, 118, 0.83);
+	background-size: contain;
+	z-index: -1;
+}
+ 
+.footer-content {
+	display: flex;	
+	justify-content: space-around;
+	align-items: flex-start;
+}
+
+.footer-h {
+	font-weight: bold;
+	margin: 0;
+}
+
+.copyright {
+	text-align: center;
+}
+/*==========*/
+/* 	EX-BOX	*/
+/*==========*/
+.ex-flex {
+	display: flex;	
+	align-items: center;
+}
+
+.ex-item {
+	position: relative;
+	border: 1px solid #000;
+	border-radius: 17px;
+	margin: 25px;
+	overflow: hidden;
+	width: 338px;
+	height: 594px;
+}
+
+.ex-bg {
+	content: ' ';
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-width: 100%;
+	max-height: 100%;
+	background-color: rgba(0, 83, 118, 0.83);
+	background-size: cover;
+}
+
+.ex-box {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0 30px;
+}
+
+
+.ex-name {
+
+}
+.ex-cal,
+.ex-coin,
+.ex-time,
+.ex-persons	{
+	justify-content: space-between;
+}
+
+
+.ex-btn {	
+	font-size: 24px;
+	padding: 3px 20px;
+ width: 223px;
+ margin: 0 auto;
+	
+	transition: all 0.5s ease;
+	border: none;
+	border-radius: 40px;	
 }
