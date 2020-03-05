@@ -1,6 +1,5 @@
 <?php get_header() ?>
-
-<div class="voyage-front-page">
+<div class="voyage-front-page container-box">
 
 	<?php if(have_posts()):while(have_posts()):the_post();?>
 		<?php the_content()?>

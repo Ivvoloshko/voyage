@@ -22,9 +22,8 @@
 
 <body <?php body_class(); ?>>
 
-<section>
-<div class="header-overlay">
-	<header class="contant-box">	
+<header>
+	<div class="header-overlay container-box">		
 		<div class="header-box">
 			<!--============-->
 			<!--	LOGO	-->
@@ -51,55 +50,63 @@
 				?>
 			</nav>										
 		</div>
-</header>
 		<!--============-->
 		<!--	INTRO	-->
 		<!--============-->
 		<div class="intro">	
-			<div class="intro-box header-bg">
-				<div>
-					<h1 class="intro-title headline"><?php bloginfo( 'name' );?></h1>
-				</div>			
-				<div>						
-					<div  class="intro-description">
-						<!--============-->
-						<!--	SOCIAL	-->
-						<!--============-->						
-						<div>
-							<ul class="social-box">
-								<li class="social-list"><a href="#" class="social-link"><i class="fab fa-viber" aria-hidden="true"></i></a></li>
-								<li class="social-list"><a href="#" class="social-link"><i class="fab fa-telegram" aria-hidden="true"></i></a></li>
-								<li class="social-list"><a href="#" class="social-link"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-								<li class="social-list"><a href="#" class="social-link"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-							</ul>	
-						</div>
-						<!--============-->
-						<!--	CONTENT	-->
-						<!--============-->							
-						<div class="intro-content">
-							<h2 class="intro-subtitle"><?php bloginfo( 'description' ); ?></h2>
-							<p class="intro-text">
-									Окунись в культуру и историю колоритного Кипра, 
-									в сопровождении опытного гида.
-							</p>
-						</div>						
-					</div>
-				</div>
+			<div class="intro-box">
 				<!--============-->
-				<!--	BUTTONS	-->
-				<!--============-->				
-				<div class="contant-box">
-					<div class="btn">
-						<a class="btn-link" href="#">Выбрать экскурсию</a>
-					</div>
-				</div>				
+				<!--	CONTENT	-->
+				<!--============-->	
+				<div  class="intro-description">
+					<div class="intro-content">
+						<h2 class="intro-subtitle-top">Кипр</h2>
+						<h1 class="intro-title"><?php bloginfo( 'name' );?></h1>
+						<h2 class="intro-subtitle-bottom"><?php bloginfo( 'description' ); ?></h2>
+						<p class="intro-text">
+								Окунись в культуру и историю колоритного Кипра, 
+								в сопровождении опытного гида
+						</p>
+						<!--============-->
+						<!--	BUTTONS	-->
+						<!--============-->	
+						<div class="btn">
+							<a class="btn-link" href="#">Выбрать экскурсию</a>
+						</div>
+					</div>						
+				</div>																		
 				<div class="mouse">
-					<a class="mouse-link" href="#"><img class="mousemouse-img" src="../img/mouse.png" alt=""></a>
-				</div>	
+					<a class="mouse-link" href="#"><img class="mouse-img" src="./wp-content/uploads/2020/03/mouse.png" alt="#"></a>
+				</div>					
 			</div>
 		</div>											
 	</div>
-</section>
+	<!-- <div class="light-block">Светлая секция</div> -->
+	<!-- <svg class="wave-divider" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+    <defs>
+        <path id="gentle-wave"
+        d="M-160 44c30 0 
+        58-18 88-18s
+        58 18 88 18 
+        58-18 88-18 
+        58 18 88 18
+        v44h-352z" />
+    </defs>
+    <g class="wave-parallax1"><use xlink:href="#gentle-wave" x="50" y="3" fill="#BFE2FF"/></g>
+    <g class="wave-parallax2"><use xlink:href="#gentle-wave" x="50" y="0" fill="#5e9cd1"/></g>
+    <g class="wave-parallax3"><use xlink:href="#gentle-wave" x="50" y="9" fill="#73bbf5"/></g>
+    <g class="wave-parallax4"><use xlink:href="#gentle-wave" x="50" y="6" fill="#337AB7"/></g>
+	</svg>
+	<div class="dark-block">Темная секция</div>
+	<svg class="wave-divider dark-bg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
+    <g class="wave-parallax1"><use xlink:href="#gentle-wave" x="50" y="3" fill="#5e9cd1"/></g>
+    <g class="wave-parallax2"><use xlink:href="#gentle-wave" x="50" y="0" fill="#73bbf5"/></g>
+    <g class="wave-parallax3"><use xlink:href="#gentle-wave" x="50" y="9" fill="#BFE2FF"/></g>
+    <g class="wave-parallax4"><use xlink:href="#gentle-wave" x="50" y="6" fill="#FFFFFF"/></g>
+	</svg>
+	<div class="light-block">Светлая секция</div> -->
+</header>
+
 
 	
 	

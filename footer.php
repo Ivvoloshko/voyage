@@ -10,7 +10,7 @@
  */
 ?>
 
-<footer class="footer-block contant-box">
+<footer class="footer-block container-box">
 	<div class='footer-content'>	
 		<div class="logo">			
 			<div class="logo-img">
@@ -20,15 +20,15 @@
 				<p>EmanGeoTours<br><span>Cyprus tours</span></p>
 			</div>	
 		</div><!--.logo -->	
-		<div  class="banner-block__description">
-			<div class="social-block">
-				<ul class="social-block__item">
-					<li class="social-block__list"><a href="#" class="social-block__link"><i class="fab fa-viber" aria-hidden="true"></i></a></li>
-					<li class="social-block__list"><a href="#" class="social-block__link"><i class="fab fa-telegram" aria-hidden="true"></i></a></li>
-					<li class="social-block__list"><a href="#" class="social-block__link"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-					<li class="social-block__list"><a href="#" class="social-block__link"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-				</ul>	
-			</div>
+		<div  class="intro-description">
+		<div>
+			<ul class="social-box">
+				<li class="social-list"><a href="#" class="social-link"><i class="fab fa-viber" aria-hidden="true"></i></a></li>
+				<li class="social-list"><a href="#" class="social-link"><i class="fab fa-telegram" aria-hidden="true"></i></a></li>
+				<li class="social-list"><a href="#" class="social-link"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
+				<li class="social-list"><a href="#" class="social-link"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+			</ul>	
+		</div>
 			<div class="">
 				<h5 class="footer-h">Обратная связь</h5>
 				<li>+357 99 322 162</li>
