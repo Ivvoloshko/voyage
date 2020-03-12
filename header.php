@@ -23,22 +23,7 @@
 <body <?php body_class(); ?>>
 
 <header>
-	<!-- <svg class="wave-divider" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
-		<defs>
-			<path id="gentle-wave"
-			d="M-160 44c30 0 
-			58-18 88-18s
-			58 18 88 18 
-			58-18 88-18 
-			58 18 88 18
-			v44h-352z" />
-		</defs>
-		<g class="wave-parallax1"><use xlink:href="#gentle-wave" x="50" y="3" fill="#BFE2FF"/></g>
-		<g class="wave-parallax2"><use xlink:href="#gentle-wave" x="50" y="0" fill="#5e9cd1"/></g>
-		<g class="wave-parallax3"><use xlink:href="#gentle-wave" x="50" y="9" fill="#73bbf5"/></g>
-		<g class="wave-parallax4"><use xlink:href="#gentle-wave" x="50" y="6" fill="#337AB7"/></g>
-	</svg>	 -->
-	<div class="dark-block ">
+		<div class="dark-block ">
 		<!--============-->
 		<!--	SOCIAL	-->
 		<!--============-->	

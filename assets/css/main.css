@@ -183,6 +183,10 @@ header {
 /*===========*/
 /*	INTRO	 */
 /*===========*/
+.custom-background { 
+	height: 900px;
+}	
+
 .intro {	
 	display: flex;
 	flex-direction: column;	
@@ -192,26 +196,17 @@ header {
 .intro-box {
 	display: flex;
 	flex-direction: column;	
-
 	color: #fff;
 }
 
-
-
-.intro-bubble{	
+.intro-bubble{		
 	background: rgba(0, 33, 62, 0.37);	
-	border-radius: 100%;
-	/* transition: none 0s ease 0s;	 */
+	border-radius: 100%;	
 	border-width: 0;	
 	min-height: 420px;
 	min-width: 420px;
 	max-height: 420px;
 	max-width: 420px;
-	/* opacity: 1; */
-	/* transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); */
-	/* transform-origin: 50% 50% 0px;		 */
-	margin-left: 60px;
-	/* filter: blur(4px); */
 }
 
 .intro-content {		
@@ -247,10 +242,6 @@ header {
 	margin-bottom: 0;
 }
 
-.intro-subtitle-top {
-	font-size: 40px;
-	letter-spacing: 0.035em;
-}
 
 .intro-subtitle-bottom {
 	font-family: 'Lora';
@@ -262,7 +253,7 @@ header {
 }
 
 .intro-description {
-	padding: calc(65vh - 450px) 0;
+	padding: calc(65vh - 400px) 0;
 	display: flex;
 	flex-direction: column;
 	font-style: normal;
@@ -313,7 +304,38 @@ header {
 .mouse-img {
 	max-width: 100%;	
 }
+/*==============*/
+/*	HEADLINE	*/
+/*==============*/
+.masthead {
+	margin: 100px 0;
+}
 
+.masthead h3 {
+	font-family: 'Source Sans Pro';	
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 30px;
+	letter-spacing: 0.095em;
+	text-transform: uppercase;
+	color: #5A5A5A;
+	margin: 0;
+	
+	padding: 0;
+}
+
+.masthead h2 {
+	font-family: 'Lora';	
+	font-weight: bold;
+	font-size: 35px;
+	line-height: 45px;
+	letter-spacing: 0.045em;
+	text-transform: uppercase;
+	color: #000E5A;
+	margin: 0;
+	margin-left: -150px;
+	padding: 0;
+}
 
 /*==============*/
 /*	HEADLINE	*/
@@ -339,7 +361,7 @@ header {
 	height: 1px;
 	/* добавляем к линии левый и правый бордюр цветом основного фона заголовка
 	** благодаря этому создается нужный отступ между линиями и текстом*/
-	border: solid #FFF;
+	border: 1px solid #6C9FBC;
 	border-width: 0 100px;	
 }
 .headline::before {
@@ -371,6 +393,7 @@ header {
 }
 
 .ex-box {
+	
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
@@ -467,103 +490,3 @@ header {
 	text-align: center;
 	margin: 0;
 }
-
-
-/* _________________________________________________ */
-.stage {
-	position: relative;
-	width: 100%;
-	height: 350px;
-	overflow: hidden;
-	background: steelblue;
-	box-shadow: 0 -400px 300px -300px orangered inset;
-	animation: sky 15s infinite linear;
-	}
-  .sun {
-	position: absolute;
-	left: 0;
-	bottom: -30%;
-	width: 10em;
-	height: 10em;
-	margin-left: -2.5em;
-	margin-top: 0;
-	background: orangered;
-	border-radius: 50%;
-	box-shadow: 0 0 20px orange;
-	animation: 15s infinite linear;
-	animation-name: sun-move, sun-color;
-	}
-  
-  @keyframes sky {
-	0% {
-	  background: darkslateblue;
-	  }
-	50% {
-	  background: skyblue;
-	  box-shadow: 0 -400px 300px -300px steelblue inset;
-	  }
-	85% {
-	 background: darkslateblue;
-	 box-shadow: 0 -400px 300px -300px orangered inset;
-	 }
-	100% {
-	  background: darkslateblue;
-	  }
-  }
-  
-  @keyframes sun-move {
-	0% {
-	  }
-	10% {
-	  margin-left: -4.5em;
-	  }
-	20% {
-	  margin-left: -5.5em;
-	  }
-	30% {
-	  margin-left: -6em;
-	  }
-	40% {
-	  margin-left: -4.5em;
-	  }
-	50% {
-	  left: 50%;
-	  bottom: 75%;
-	  width: 5em;
-	  height: 5em;
-	  margin-left: -2.5em;
-	  }
-	60% {
-	   margin-left: 1.5em;
-	  }
-	70% {
-	  margin-left: 3.5em;
-	  }
-	80% {
-	  margin-left: 2.5em;
-	  }
-	90% {
-	  margin-left: 1em;
-	  }
-	100% {
-	  left: 98%;
-	  margin-left: -2.5em;
-	  }
-  }
-  
-  @keyframes sun-color {
-	20% {
-		background: orange;
-	  }
-	40% {
-		background: gold;
-		box-shadow: 0 0 35px gold;
-	  }
-	60% {
-		background: yellow;
-		box-shadow: 0 0 35px yellow;
-	  }
-	80% {
-	  background: orange;
-	  }
-  }

@@ -12,11 +12,7 @@
 
 <footer class="footer-block">
 <div class="voyage-front-page ">
-<div class="stage">
-<div class="sun"></div>
-  <div class="square"></div>
-  <div class="round"></div>
-</div>
+
 <svg class="wave-divider wave-divider-footer" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
 		<defs>
 			<path id="gentle-wave"
@@ -76,12 +72,6 @@
 		<p>&copy;EmanGeoTours - Cyprus excursions <?php echo date('Y')?> | Все права защищены</p>
 	</div>		
 	</div>	
-	<svg class="wave-divider dark-bg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none">
-		<g class="wave-parallax1"><use xlink:href="#gentle-wave" x="50" y="3" fill="#5e9cd1"/></g>
-		<g class="wave-parallax2"><use xlink:href="#gentle-wave" x="50" y="0" fill="#73bbf5"/></g>
-		<g class="wave-parallax3"><use xlink:href="#gentle-wave" x="50" y="9" fill="#BFE2FF"/></g>
-		<g class="wave-parallax4"><use xlink:href="#gentle-wave" x="50" y="6" fill="#FFFFFF"/></g>
-	</svg>
 
 
 </footer>	
