@@ -45,6 +45,8 @@ if ( ! function_exists( 'voyage_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'header-menu' => esc_html__( 'Header Menu', 'voyage' ),
+			'footer-menu' => esc_html__( 'Footer Menu', 'voyage' ),
+			'social-menu' => esc_html__( 'Social Menu', 'voyage' ),
 		) );
 
 		/*
@@ -122,6 +124,7 @@ add_action( 'widgets_init', 'voyage_widgets_init' );
 function voyage_scripts() {
 	wp_enqueue_style( 'voyage-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'voyage-main-style', get_template_directory_uri() . '/assets/css/main.css' );
+	wp_enqueue_script( 'voyage-main-js', get_template_directory_uri() . '/assets/js/main.js', array(), '20151215', true );
 	// wp_enqueue_style( 'voyage-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
 	wp_enqueue_script( 'jquery');
 	
@@ -193,4 +196,3 @@ add_action('admin_menu','hide_admin_notices');
 function hide_admin_notices() {
 	remove_action( 'admin_notices', 'update_nag', 3 );
 }
-

@@ -17,6 +17,7 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+		
 
 		<?php
 		if ( have_posts() ) :
@@ -28,7 +29,7 @@ get_header();
 				</header>
 				<?php
 			endif;
-
+			
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
@@ -41,8 +42,12 @@ get_header();
 				get_template_part( 'template-parts/content', get_post_type() );
 
 			endwhile;
-
-			the_posts_pagination();
+			
+			the_posts_pagination( array(
+				'mid_size' => 2,
+				'end_size' => 2,
+		   ) ); 				
+				
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
@@ -54,5 +59,5 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-
+get_sidebar();
 get_footer();
