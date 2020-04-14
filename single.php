@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying all single posts
  *
@@ -9,7 +10,6 @@
 
 get_header();
 ?>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
@@ -40,5 +40,6 @@ get_header();
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
+
 get_footer();
+?>

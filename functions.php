@@ -121,21 +121,30 @@ add_action( 'widgets_init', 'voyage_widgets_init' );
 /**
  * Enqueue scripts and styles.
  */
+ function my_scripts_method(){
+	if ( !is_admin() ) { 
+		wp_enqueue_script( 'jquery' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'my_scripts_method' );
+
 function voyage_scripts() {
 	wp_enqueue_style( 'voyage-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'voyage-main-style', get_template_directory_uri() . '/assets/css/main.css' );
-	wp_enqueue_script( 'voyage-main-js', get_template_directory_uri() . '/assets/js/main.js', array(), '20151215', true );
+	
+	wp_enqueue_script( 'voyage-main-js', get_template_directory_uri() . '/assets/js/main.js', array(), '1.0', true );
 	// wp_enqueue_style( 'voyage-bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css' );
-	wp_enqueue_script( 'jquery');
+
 	
 // default 	
 
 	// wp_enqueue_script('voyage-bootstrap-js', get_template_directory_uri () . '/assets/js/bootstrap.min.js', array(),'1.0', true);
-	wp_enqueue_script( 'voyage-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-	wp_enqueue_script( 'voyage-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {wp_enqueue_script( 'comment-reply' );}
+	// wp_enqueue_script( 'voyage-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	// wp_enqueue_script( 'voyage-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {wp_enqueue_script( 'comment-reply' );}
 // default 	
 }
+
 
 function wph_add_google_fonts() {
     if ( !is_admin() ) {
@@ -195,4 +204,27 @@ add_filter( 'auto_update_theme', '__return_false' );
 add_action('admin_menu','hide_admin_notices');
 function hide_admin_notices() {
 	remove_action( 'admin_notices', 'update_nag', 3 );
+}
+// хлебные крошки
+function wpcourses_breadcrumb( $sep = ' > ' ) {
+	global $post;
+	$out = '';
+	$out .= '<div class="wpcourses-breadcrumbs">';
+	$out .= '<a href="' . home_url( '/' ) . '">Главная</a>';
+	$out .= '<span class="wpcourses-breadcrumbs-sep">' . $sep . '</span>';
+	if ( is_single() ) {
+		$terms = get_the_terms( $post, 'category' );
+		if ( is_array( $terms ) && $terms !== array() ) {
+			$out .= '<a href="' . get_term_link( $terms[0] ) . '">' . $terms[0]->name . '</a>';
+			$out .= '<span class="wpcourses-breadcrumbs-sep">' . $sep . '</span>';
+		}
+	}
+	if ( is_singular() ) {
+		$out .= '<span class="wpcourses-breadcrumbs-last">' . get_the_title() . '</span>';
+	}
+	if ( is_search() ) {
+		$out .= get_search_query();
+	}
+	$out .= '</div><!--.wpcourses-breadcrumbs-->';
+	return $out;
 }

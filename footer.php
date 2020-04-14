@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying the footer
  *
@@ -35,23 +36,23 @@
 							<?php the_custom_logo(); ?>					
 						</div>
 						<div class="logo-title">
-							<p>EmanGeoTours<br><span>Cyprus excursions</span></p>
+							<p class="footer-logo-text">EmanGeoTours<br><span class="footer-logo-text">Cyprus excursions</span></p>
 						</div>	
 					</div>		
 					<div class="time-box">
 						<h5 class="footer-h">Время работы</h5>
-						<li>9:00-18:00</li>		
+						<li>9:00 - 18:00</li>		
 					</div>		
 				</div>				
 				<div class="contact-box">
 					<h5 class="footer-h">Обратная связь</h5>
 					<li>+357 99 322 162</li>
-					<li>+357 96 171 157 </li>
-					<li>emangeotour1@gmail.com</li>
+					<li>+357 96 171 157 </li>				
 					<li>Cyprus,  Protaras,</li>
-					<li>Street Cavo Greko 547</li>				
+					<li>Street Cavo Greko 547</li>	
+					<li>emangeotour1@gmail.com</li>			
 				</div>						
-				<nav class="main-navigation">
+				<nav class="main-navigation footer-navi">
 					<!-- <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'voyage' ); ?></button> -->
 					<h5 class="footer-h">Страницы</h5>
 					<?php
@@ -64,13 +65,12 @@
 				</nav>	
 				<div class="footer-pay">
 					<h5 class="footer-h">Способы оплаты</h5>
-					<ul class="social-box pay-box">						
-						<li class="social-list"><i class="fa fa-cc-paypal fa-2x" aria-hidden="true"></i></li>
-						<li class="social-list"><i class="fa fa-cc-mastercard fa-2x" aria-hidden="true"></i></li>
-						<li class="social-list"><i class="fa fa-cc-visa fa-2x" aria-hidden="true"></i></li>						
+					<ul class="social-box pay-box">		
+						<li class="social-list"><i class="fa fa-cc-visa fa-2x" aria-hidden="true"></i></li>					
+						<li class="social-list"><i class="fa fa-cc-mastercard fa-2x" aria-hidden="true"></i></li>											
 					</ul>
-					<h5 class="footer-h">Присоединяйтесь к нам:</h5>
-					<ul class="social-box">
+					<h5 class="footer-h">Мы в соцсетях:</h5>
+					<ul class="social-box footer-social-box">
 						<li class="social-list"><a href="#" class="social-link"><i class="fab fa-viber" aria-hidden="true"></i></a></li>
 						<li class="social-list"><a href="#" class="social-link"><i class="fab fa-telegram-plane" aria-hidden="true"></i></a></li>
 						<li class="social-list"><a href="#" class="social-link"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
@@ -79,13 +79,12 @@
 				</div>	
 			</div>	
 			<div class="copyright">
-				<p>&copy; EmanGeoTours - Cyprus excursions <?php echo date('Y')?> | Все права защищены </p>
+				<p>&copy; EmanGeoTours - Cyprus excursions <?php echo date('Y')?></p>
 			</div>	
 		</div>	
 	</div>	
 </footer>	
 
 <?php wp_footer(); ?>
-
 </body>
 </html>

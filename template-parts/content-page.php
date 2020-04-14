@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Template part for displaying page content in page.php
  *
@@ -15,7 +16,7 @@
 	</header><!-- .entry-header -->
 
 	<?php voyage_post_thumbnail(); ?>
-
+	<?php echo wpcourses_breadcrumb( ' / ' ); ?>
 	<div class="entry-content">
 
 		<?php
